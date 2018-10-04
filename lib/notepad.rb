@@ -1,5 +1,5 @@
 class Notepad
-  def create(title)
-    
+  def create(title, body)
+
   end
 end
