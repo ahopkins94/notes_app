@@ -1,7 +1,11 @@
 class Notepad
-  attr_reader :note
+  attr_reader :notes
+
+  def initialize
+    @notes = []
+  end
 
   def create(title, body)
-    @note = [title, body]
+    @notes << [title, body]
   end
 end
