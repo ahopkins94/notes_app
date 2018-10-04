@@ -2,9 +2,11 @@ require 'notepad'
 
 describe Notepad do
   describe "#create" do
-    it 'creates a note with a title and a body' do
+    it 'can store a note we created' do
       notepad = Notepad.new
-      expect { notepad.create("Title.", "This is the body.") }.to_not raise_error
+      title, body = "Title", "This is the body."
+      notepad.create(title, body)
+      expect(notepad.note).to eq [title, body]
     end
   end
 end
